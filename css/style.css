@@ -55,8 +55,7 @@ body {
 
 .header-list {
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    align-items: center;
 }
 
 .header-container {
@@ -102,6 +101,11 @@ body {
     letter-spacing: 0.02em;
     color: #212121;
     position: relative;
+    display: flex;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .header-link-current::after {
@@ -115,11 +119,10 @@ body {
     bottom: 0;
 }
 
-
-
 .header-link:hover,
 .header-link:focus {
     color: var(--hover-color);
+    transform: scale(1.25); 
     
 }
 
@@ -143,7 +146,10 @@ body {
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-mail-icon {
@@ -157,6 +163,7 @@ fill: #757575;
 .header-link-mail:hover,
 .header-link-mail:focus {
     color: var(--hover-color);
+    transform: scale(1.25);
 }
 
 .header-link-mail:hover .header-link-mail-icon,
@@ -185,12 +192,16 @@ fill: #757575;
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-tel:hover,
 .header-link-tel:focus {
     color: var(--hover-color);
+    transform: scale(1.25);
 }
 
 .header-link-tel:hover .header-link-tel-icon,
@@ -321,6 +332,26 @@ fill: #757575;
     color:var(--title-collor);
     text-align: center;
     margin-bottom: 50px;
+}
+
+.content-list-wrap {
+    position: relative;
+
+}
+
+.content-list-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:  #FFFFFF;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 82px 27px 82px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 /* TEAM */
@@ -684,6 +715,23 @@ margin-bottom: 0;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color:var(--main-text-color)  
+}
+
+.portfolio-item-wrap {
+    position: relative;
+
+}
+
+.portfolio-wrap-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    padding: 63px 24px 63px 24px;
+    color: black; 
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .visually-hidden {
